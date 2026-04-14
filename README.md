@@ -52,6 +52,7 @@ Backend trusts user input → Logic flaw + IDOR
 # 🥉 3. ACCESS CONTROL
 
 🔧 Test
+
 *Remove:*
 ```jsx
 Cookie
@@ -65,7 +66,7 @@ order data returned
 🚨 Result
 No auth needed → Broken access control
 
-🥇 4. HIDDEN PARAMETER (PRIV ESCALATION)
+# 🥇 4. HIDDEN PARAMETER (PRIV ESCALATION)
 
 🔧 Test
 
@@ -83,7 +84,7 @@ No auth needed → Broken access control
 
 Hidden param unlock → Privilege escalation
 
-🥈 5. METHOD ABUSE
+# 🥈 5. METHOD ABUSE
 
 🔧 Test
 
@@ -97,7 +98,7 @@ order deleted successfully
 
 Unauthorized method allowed → API misconfig
 
-🥉 6. BUSINESS LOGIC BUG
+# 🥉 6. BUSINESS LOGIC BUG
 
 🔧 Request
 
@@ -119,7 +120,7 @@ payment successful
 
 Price manipulation → Business logic flaw
 
-🧠 ADVANCED TEST BLOCK (MUST APPLY)
+# 🧠 ADVANCED TEST BLOCK (MUST APPLY)
 
 🔹 PARAM REMOVAL
 
@@ -159,7 +160,6 @@ Auth bypass?
 Response size change?
 
 🔥 FULL PRO LOOP
-
 1. Capture request
 2. Send to repeater
 3. Change ONE param
@@ -168,38 +168,26 @@ Response size change?
 6. Repeat
 
 🧠 WHAT YOU ARE ATTACKING
+- Identity (user কে?)
+- Authorization (allowed?)
+- Logic (flow correct?)
 
-Identity (user কে?)
-
-Authorization (allowed?)
-
-Logic (flow correct?)
-
-⚡ HIGH ROI BUG FOCUS
+# ⚡ HIGH ROI BUG FOCUS
 
 Only care about:
-
 IDOR
-
 Access control
-
 Business logic
-
 Auth issues
 
 🧠 FINAL TRUTH
-
-Burp = experiment lab
-You = decision engine
+- Burp = experiment lab
+- You = decision engine
 
 🚀 PRACTICE RULE
-
-1 request → 10 tests
-
-30 requests → strong skill
-
-Repeat daily
-
-Happy Hunting 🔥
+- 1 request → 10 tests
+- 30 requests → strong skill
+- Repeat daily
+- Happy Hunting 🔥
 
 
