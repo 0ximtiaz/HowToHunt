@@ -1,6 +1,4 @@
-# HowToHunt
-
-# 🧠 Bug Bounty Burp Deep Testing Playbook (Top-Tier Bugs with Full Demo)
+# Bug Bounty Burp Deep Testing Playbook (Top-Tier Bugs with Full Demo)
 
 This is a deep, practical, copy-follow guide to test high ROI bugs using Burp Suite.
 
