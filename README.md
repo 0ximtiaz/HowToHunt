@@ -52,7 +52,6 @@ Backend trusts user input → Logic flaw + IDOR
 # 🥉 3. ACCESS CONTROL
 
 🔧 Test
-
 *Remove:*
 ```jsx
 Cookie
