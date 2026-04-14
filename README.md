@@ -5,30 +5,29 @@
 This is a deep, practical, copy-follow guide to test high ROI bugs using Burp Suite.
 
 🚀 CORE RULE
-
 Same request + small change = vulnerability chance
 
 # 🎯 MASTER DEMO TARGET
-
+```jsx
 GET /api/v1/orders?order_id=8472&user_id=221 HTTP/1.1
 Host: target.com
 Cookie: session=abc123
 Authorization: Bearer token123
-
+```
 🥇 1. IDOR (OBJECT ACCESS)
 
 🔧 Test
-
+```jsx
 order_id=8472 → 8473
-
+```
 📥 Vulnerable Response
-
+```jsx
 {
   "order_id": 8473,
   "user_id": 999,
   "item": "iPhone"
 }
-
+```
 🚨 Result
 
 Other user data visible → IDOR
