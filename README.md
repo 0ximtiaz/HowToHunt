@@ -53,7 +53,7 @@ Backend trusts user input → Logic flaw + IDOR
 
 🔧 Test
 
-**Remove:**
+*Remove:*
 ```jsx
 Cookie
 Authorization
