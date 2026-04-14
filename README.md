@@ -69,95 +69,87 @@ No auth needed → Broken access control
 # 🥇 4. HIDDEN PARAMETER (PRIV ESCALATION)
 
 🔧 Test
-
+```jsx
 &admin=true
 &role=admin
 &view=all
-
+```
 📥 Vulnerable Response
-
+```jsx
 {
   "orders": "ALL USERS DATA"
 }
-
+```
 🚨 Result
-
 Hidden param unlock → Privilege escalation
 
 # 🥈 5. METHOD ABUSE
 
 🔧 Test
-
+```jsx
 GET → POST
-
+```
 📥 Vulnerable Response
-
+```jsx
 order deleted successfully
-
+```
 🚨 Result
-
 Unauthorized method allowed → API misconfig
 
 # 🥉 6. BUSINESS LOGIC BUG
 
 🔧 Request
-
+```jsx
 POST /api/pay
 {
   "order_id": 8472,
   "amount": 1200
 }
-
+```
 🔧 Test
-
+```jsx
 amount = 1
-
+```
 📥 Vulnerable Response
-
+```jsx
 payment successful
-
+```
 🚨 Result
-
 Price manipulation → Business logic flaw
 
 # 🧠 ADVANCED TEST BLOCK (MUST APPLY)
 
 🔹 PARAM REMOVAL
-
+```jsx
 /api/orders?order_id=8472
-
+```
 🔹 NULL TEST
-
+```jsx
 order_id=null
 order_id=0
-
+```
 🔹 DUPLICATE PARAM
-
+```jsx
 order_id=8472&order_id=8473
-
+```
 🔹 TYPE CONFUSION
-
+```jsx
 order_id="8472"
 order_id=8472.0
-
+```
 🔹 HEADER TEST
-
+```jsx
 X-Forwarded-For: 127.0.0.1
 X-Original-URL: /admin
-
+```
 🧠 RESPONSE ANALYSIS (CRITICAL)
 
 Check:
-
-Data changed?
-
-Different user data?
-
-More data returned?
-
-Auth bypass?
-
-Response size change?
+- Data changed?
+- Different user data?
+- More data returned?
+- Auth bypass?
+- Response size change?
 
 🔥 FULL PRO LOOP
 1. Capture request
