@@ -29,44 +29,41 @@ order_id=8472 → 8473
 }
 ```
 🚨 Result
-
 Other user data visible → IDOR
 
-🥈 2. USER MISMATCH (ADVANCED IDOR)
+# 🥈 2. USER MISMATCH (ADVANCED IDOR)
 
 🔧 Test
-
+```jsx
 order_id=8472&user_id=221
 →
 order_id=8472&user_id=999
-
+```
 📥 Vulnerable Response
-
+```jsx
 {
   "order_id": 8472,
   "user_id": 999
 }
-
+```
 🚨 Result
-
 Backend trusts user input → Logic flaw + IDOR
 
-🥉 3. ACCESS CONTROL
+# 🥉 3. ACCESS CONTROL
 
 🔧 Test
 
-Remove:
-
+**Remove:**
+```jsx
 Cookie
 Authorization
-
+```
 📥 Vulnerable Response
-
+```jsx
 200 OK
 order data returned
-
+```
 🚨 Result
-
 No auth needed → Broken access control
 
 🥇 4. HIDDEN PARAMETER (PRIV ESCALATION)
