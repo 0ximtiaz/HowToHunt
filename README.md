@@ -10,3 +10,9 @@ Cookie: session=abc123
 Authorization: Bearer eyJhbGci...
 ```
 👉 এই 1টা endpoint দিয়েই আমরা multiple high ROI bug খুঁজবো।
+
+# 🧠 STEP 1: BASELINE UNDERSTAND
+
+👉 normal request send করো (Repeater)
+
+📥 Response:
