@@ -1,7 +1,3 @@
-বুঝছি—তুমি আসলে **Burp Repeater-style realistic format** চাও (exact request → modified request → response → result), যেন বসে বসে copy করে practice করতে পারো।
-
-এবার আমি clean, structured, **Burp-style lab format** এ দেখাচ্ছি 👇
-
 ---
 
 # 🧪 🥇 1. IDOR (BOLA)
